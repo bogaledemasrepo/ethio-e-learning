@@ -1,6 +1,6 @@
 import Rapper from "../components/Rapper";
 
-function About() {
+function Services() {
   return (
     <Rapper>
       <main></main>
@@ -8,4 +8,4 @@ function About() {
   );
 }
 
-export default About;
+export default Services;

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import CustomButton from "../components/CustomButton";
 import Rapper from "../components/Rapper";
 
@@ -10,7 +11,9 @@ function Home() {
           <h1 className="text-4xl text-white font-bold text-center">
             Wellcome to Ethio E-Learining
           </h1>
-          <CustomButton title="Get started" />
+          <Link to={"/login"}>
+            <CustomButton title="Get started" />
+          </Link>
         </div>
       </main>
     </Rapper>

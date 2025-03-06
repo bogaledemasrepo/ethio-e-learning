@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CloseIcon from "./CloseIcon";
+import MenuIcon from "./MenuIcon";
 
 function Header() {
   const Links = () => (
@@ -34,9 +36,11 @@ function Header() {
             <>
               {" "}
               <button
-                className="hover:bg-slate-300 transition duration-300 border border-slate-400 w-8 h-8 flex cursor-pointer flex-col justify-evenly p-1"
+                className="hover:bg-slate-300 transition-all duration-300 border border-slate-400 w-8 h-8 flex cursor-pointer flex-col items-center justify-center"
                 onClick={() => setMobileNavOpend(!mobileNavOpend)}
-              ></button>
+              >
+                <MenuIcon bg="bg-[#777]" />
+              </button>
             </>
           ) : (
             <>
@@ -44,10 +48,10 @@ function Header() {
                 <div className="flex-1"></div>
                 <div className="flex-1 bg-[#ffffff7a] flex gap-2 justify-end p-8">
                   <button
-                    className="absolute hover:bg-slate-300 transition duration-300 border border-slate-400 py-2 px-3 cursor-pointer rounded-md text-white font-semibold"
+                    className="absolute hover:bg-slate-300 transition duration-300 border border-slate-400 p-1 flex items-center justify-center cursor-pointer rounded-md text-white font-semibold"
                     onClick={() => setMobileNavOpend(!mobileNavOpend)}
                   >
-                    X
+                    <CloseIcon bg="bg-[#777]" />
                   </button>
                   <ul className="flex-1 flex gap-2 mt-20 flex-col">
                     <Links />
