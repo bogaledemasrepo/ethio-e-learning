@@ -25,7 +25,7 @@ function Header() {
     <div className="w-full h-16 bg-[#46516166] flex items-center justify-between px-4">
       <a href="/">
         <div className="w-12 h-12 rounded-full flex items-center justify-center">
-          <img src="/public/images/logo.jpeg" alt="alogo" />
+          <img src="/images/logo.jpeg" alt="alogo" />
         </div>
       </a>
       <nav>
@@ -36,11 +36,7 @@ function Header() {
               <button
                 className="hover:bg-slate-300 transition duration-300 border border-slate-400 w-8 h-8 flex cursor-pointer flex-col justify-evenly p-1"
                 onClick={() => setMobileNavOpend(!mobileNavOpend)}
-              >
-                <div className="w-full h-[4px] bg-white rounded-full"></div>
-                <div className="w-full h-[4px] bg-white rounded-full"></div>
-                <div className="w-full h-[4px] bg-white rounded-full"></div>
-              </button>
+              ></button>
             </>
           ) : (
             <>
