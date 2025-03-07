@@ -1,8 +1,9 @@
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 import Leftnav from "../components/Leftnav";
 import Rapper from "../components/Rapper";
 
 function Studentslist() {
+  const navigate = useNavigate();
   return (
     <Rapper>
       <main className="w-full min-h-screen bg-[#46516166] flex px-4">
@@ -13,11 +14,12 @@ function Studentslist() {
               Students data
             </h1>
             <div className="">
-              <Link to={"register"}>
-                <button className="px-3 py-2 rounded-sm bg-blue-500 text-white font-semibold cursor-pointer">
-                  Register
-                </button>
-              </Link>
+              <button
+                className="px-3 py-2 rounded-sm bg-blue-500 text-white font-semibold cursor-pointer"
+                onClick={() => navigate("register")}
+              >
+                Register
+              </button>
             </div>
           </div>
           <div className="flex flex-col space-y-1 mt-8">

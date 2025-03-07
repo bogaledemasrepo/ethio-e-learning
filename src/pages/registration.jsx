@@ -1,10 +1,14 @@
+// import { useNavigate } from "react-router";
 import CustomButton from "../components/CustomButton";
 import CustomInput from "../components/CustomInput";
 import Rapper from "../components/Rapper";
 
 function Registration() {
+  // const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log("Pass");
+    // navigate("/register");
     console.log(new FormData(e.target));
   };
   return (

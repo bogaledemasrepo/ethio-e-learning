@@ -2,13 +2,16 @@ import { useNavigate } from "react-router";
 import CustomButton from "../components/CustomButton";
 import CustomInput from "../components/CustomInput";
 import Rapper from "../components/Rapper";
+import { useAuth } from "../hooks/authContext";
 
 function Login() {
+  const { setIsLoged } = useAuth();
   const navigate = useNavigate();
   const loginHandler = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     if (formData.get("email") && formData.get("password")) {
+      setIsLoged(true);
       navigate("/students");
     }
   };
